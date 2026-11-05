@@ -61,9 +61,3 @@ Para evitar resultados incorretos, a implementação atual interrompe o cálculo
 - entradas que provocam reconvergência e possível dupla contagem;
 - reconvergência de caminhos em um processo;
 - realimentação.
-
-Esses casos exigem regras adicionais de álgebra emergética e **não são contabilizados silenciosamente**. Uma próxima etapa do projeto é implementar e testar essas regras antes de ampliar o escopo declarado.
-
-## Referência
-
-MARVUGLIA, Antonino; BENETTO, Enrico; RIOS, Gordon; RUGANI, Benedetto. SCALE: Software for CALculating Emergy based on life cycle inventories. *Ecological Modelling*, v. 248, p. 80–91, 2013. DOI: https://doi.org/10.1016/j.ecolmodel.2012.09.013.
