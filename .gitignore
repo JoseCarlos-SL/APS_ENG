@@ -1,0 +1,23 @@
+# Cache e arquivos compilados do Python
+__pycache__/
+*.py[cod]
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Cache e relatórios de ferramentas de teste/cobertura
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Arquivos locais do sistema e do editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Relatório gerado na raiz do projeto
+/resultado.json
