@@ -1,0 +1,30 @@
+{
+  "escopo": "cadeia simples, sem coprodutos, divisão ou realimentação",
+  "saida": "s2",
+  "processo": "p2",
+  "descricao_processo": "Produção do produto",
+  "unidade_funcional": {
+    "quantidade": "10",
+    "unidade": "kg"
+  },
+  "contribuicoes": [
+    {
+      "id_fonte": "f2",
+      "id_processo": "p2",
+      "quantidade_utilizada": "4",
+      "unidade_fonte": "J",
+      "valor_emergia_por_unidade": "5",
+      "emergia_sej": "20"
+    },
+    {
+      "id_fonte": "f1",
+      "id_processo": "p1",
+      "quantidade_utilizada": "4",
+      "unidade_fonte": "J",
+      "valor_emergia_por_unidade": "3",
+      "emergia_sej": "12"
+    }
+  ],
+  "emergia_total_sej": "32",
+  "emergia_por_unidade_funcional_sej": "3.2"
+}
