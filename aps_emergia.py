@@ -281,12 +281,6 @@ def calcular(
             )
 
         entradas = entradas_por_processo.get(processo, [])
-        if len(entradas) > 1:
-            raise ErroDados(
-                f"Processo {processo} possui múltiplas entradas de "
-                "processos: caso ainda não implementado"
-            )
-
         processos_ativos.add(processo)
         processos_visitados.add(processo)
         execucoes = demanda / saida.quantidade

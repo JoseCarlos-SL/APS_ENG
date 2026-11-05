@@ -2,7 +2,7 @@
 
 Projeto acadêmico desenvolvido em Python para importar dados tabulares de processos e calcular a emergia associada a uma unidade funcional. A proposta é inspirada no software SCALE e integra uma APS de Engenharia de Software.
 
-> **Estado atual:** o núcleo calcula cadeias simples. Divisão de fluxos, coprodutos, reconvergência e realimentação são detectados, mas ainda não são calculados. O projeto não deve ser apresentado como uma implementação completa do SCALE.
+> **Estado atual:** o núcleo calcula cadeias simples e redes com múltiplas entradas independentes. Divisão de fluxos, coprodutos, reconvergência e realimentação são detectados, mas ainda não são calculados. O projeto não deve ser apresentado como uma implementação completa do SCALE.
 
 ## Requisitos
 
@@ -48,17 +48,17 @@ O campo `referencia` aceita `sim` ou `nao`. O valor emergético das fontes é ex
 
 Na raiz do projeto, execute o módulo `unittest` do Python com descoberta de testes na pasta atual e o padrão de arquivo `test_aps_emergia.py`, em modo detalhado. Ao final, o terminal deve informar `OK` se todos os testes passarem.
 
-A execução registrada nesta etapa passou em **9 testes**. Eles verificam resultados de cadeias simples, escala da unidade funcional e rejeição de entradas inválidas ou de estruturas ainda não suportadas.
+A execução registrada nesta etapa passou em **12 testes**. Eles verificam resultados de cadeias simples, escala da unidade funcional, múltiplas entradas independentes e rejeição de entradas inválidas ou de estruturas ainda não suportadas.
 
 ## Escopo e limitações
 
-O cálculo percorre uma cadeia de processos a partir da saída selecionada, ajusta as quantidades à unidade funcional e soma as contribuições das fontes. O relatório apresenta as contribuições individuais, a emergia total e a emergia por unidade funcional.
+O cálculo percorre os processos a partir da saída selecionada, aceita múltiplas entradas independentes, ajusta as quantidades à unidade funcional e soma as contribuições das fontes. O relatório apresenta as contribuições individuais, a emergia total e a emergia por unidade funcional.
 
 Para evitar resultados incorretos, a implementação atual interrompe o cálculo quando encontra:
 
 - coprodutos;
 - divisão de uma saída entre múltiplos consumidores;
-- múltiplas entradas de processos em um mesmo processo;
+- entradas que provocam reconvergência e possível dupla contagem;
 - reconvergência de caminhos em um processo;
 - realimentação.
 
