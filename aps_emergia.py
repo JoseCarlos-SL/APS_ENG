@@ -228,6 +228,9 @@ def calcular(
     quantidade: Decimal,
     unidade: str,
 ) -> dict:
+    quantidade = numero_positivo(
+        str(quantidade), "quantidade da unidade funcional"
+    )
     alvo = saidas.get(id_saida)
     if alvo is None:
         raise ErroDados(f"Saída selecionada inexistente: {id_saida}")
